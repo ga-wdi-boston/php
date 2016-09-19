@@ -111,18 +111,25 @@ echo "This is a " . $str; # => "This is a test"
 
 ### Conditionals
 
-Again, colons and whitespace are critical to working Python code. Aside from
-that and the use of `elif` vs. `elsif`, these should feel very similar to Ruby
-conditional statements.
+PHP conditional statements are practically identical to JavaScript's.
 
-```python
-if x < 0:
-  print 'Negative'
-elif x == 0:
-  print 'Zero'
-else:
-  print 'Positive'
+```php
+if (1 > 2)
+{
+	echo "this";
+}
+elseif (2 > 3)
+{
+	echo "that";
+}
+else
+{
+	echo "phew";
+}
 ```
+
+One stylistic difference you'll start noticing with PHP is that blocks (`{}`)
+typically open on a new line.
 
 ### Loops
 
