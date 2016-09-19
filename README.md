@@ -155,31 +155,19 @@ for ($i = 1; $i <= 10; $i++) {
 
 ## Functions
 
-Functions in Python are similar to Ruby methods (Python also has methods, but
-we only refer to them as such when they are functions of a Class).
+Functions in PHP are named in camel case (no `$` here). The arguments they take
+do have the same syntax as variables, though.
 
-Aside from syntactical differences, the main difference to note is the need for
-an **explicit return**. Think JavaScript!
+If `return` is not explicit, functions in PHP return `NULL`.
 
 Basic function structure:
 
-```python
-def function_example(param_one, param_two):
-  """Example function returning string interpolation of parameters."""
-  concat = "What a splendid function! I've got my {0} and {1}.".format(param_one, param_two)
-  return concat
+```php
+function add($a,$b){
+  return $a + $b;
+}
+add(10,20);
 ```
-
-#### Brief Aside: Docstrings
-
-You may have noticed something like
-
-`"""This function..."""`
-
-within each of our example functions. These are called `docstrings` and are
-conventionally used in Python to provide documentation throughout a codebase.
-Code will run fine without them, but that would stray from Python's conventions
-as well as throw you into linter message hell. Try them out!
 
 ## Lab: Build a Calculator
 
