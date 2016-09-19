@@ -241,10 +241,10 @@ Useful tools for PHP Arrays:
 
 | Command | Meaning | Example |
 |:--------|:--------|:--------|
-|  `var_dump()`  |  Prints out contents of array  |  var_dump($array)  |
-|  `in_array()`  |  Returns true if element exists in array  |  in_array($element, $array)  |
-|  `array_map()`  |  Returns new array with applied callback to every element of array  |  array_map($callback, $array)  |
-|  `array_filter()`  |  Returns new array with every element of array that return `TRUE` from callback  |  array_filter($array, $callback)  |
+|  `var_dump()`  |  Prints out contents of array  |  `var_dump($array)`  |
+|  `in_array()`  |  Returns true if element exists in array  |  `in_array($element, $array)`  |
+|  `array_map()`  |  Returns new array with applied callback <br> to every element of array  |  `array_map($callback, $array)`  |
+|  `array_filter()`  |  Returns new array with every element of <br> array that returns `TRUE` from callback  |  `array_filter($array, $callback)`  |
 
 There are a multitude of array methods available in PHP. Check out the list
 [here](http://php.net/manual/en/ref.array.php).
