@@ -205,18 +205,18 @@ $arr = array(
 echo $arr['key1'];
 ```
 
+## Lab: FizzBuzz
 
-## Lab: Revamp FizzBuzz
+In [lib/fizzbuzz.php](lib/fizzbuzz.php), build FizzBuzz from scratch. Create an
+array containing keys `fizz`, `buzz`,`fizzbuzz`, and `other`, each with arrays
+as values. As you iterate through all the numbers from 1 to `$maxNum`, push
+each number into one of the lists mentioned above;
 
-In [lib/list_and_dict_buzz.rb](lib/list_and_dict_buzz.rb), build a more robust
-FizzBuzz from scratch. Create a dictionary containing keys `fizz`, `buzz`,
-`fizzbuzz`, and `other`, each with lists as values. As you iterate through all
-the numbers from 1 to max_num, add each number to one of the lists mentioned
-above; numbers divisible by 3 only should go into the `fizz` list, numbers
-divisible by 5 only should go into the `buzz` list, numbers divisible by both
-should go into the `fizzbuzz` list, and numbers divisible by neither should go
-into the "other" list. Finally, once you're done, print the resulting
-dictionary to check that your code works properly.
+Numbers divisible by 3 only should go into the `fizz` array, numbers
+divisible by 5 only should go into the `buzz` array, numbers divisible by both
+should go into the `fizzbuzz` array, and numbers divisible by neither should go
+into the "other" array. Finally, once you're done, print the resulting
+array to check that your code runs properly.
 
 ## Additional Resources
 

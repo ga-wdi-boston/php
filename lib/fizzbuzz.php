@@ -1,0 +1,5 @@
+<?php
+
+$maxNum;
+
+// fizzbuzz here:
