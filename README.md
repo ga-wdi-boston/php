@@ -133,32 +133,25 @@ typically open on a new line.
 
 ### Loops
 
-Also like Ruby, Python employs `while` and `for` loops.
+Again, just like JavaScript!
 
-Python also allows for an optional `else` statement with each of these. With
-`while` loops, the `else` statement is executed once the `while` condition is
-no longer true. With `for` loops, `else` is executed upon the loop's
-completion.
+`while`:
 
-```python
-count = 0
-while count < 5:
-   print count, " is  less than 5"
-   count = count + 1
-else:
-   print count, " is not less than 5"
+```php
+while ( $i < 10 )
+{
+  echo $i;
+  $i++;
+};
 ```
 
-```python
-count = 15
-for i in range(1,count):
-  print i
-else:
-  print "done"
-```
+`for`:
 
-Again, this `else` is optional and different in nature from a conditional else.
-It functions more as a completion handler.
+```php
+for ($i = 1; $i <= 10; $i++) {
+  echo $i;
+}
+```
 
 ## Functions
 
