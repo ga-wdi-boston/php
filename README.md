@@ -86,41 +86,25 @@ artithmetic operator listed for you above.
 
 ## Strings
 
-In Python, there is no difference between using `" "` or `' '`.
-[Escape Characters](http://python-reference.readthedocs.io/en/latest/docs/str/escapes.html)
-are evaluated in both.
-
-```python
->>> print "This is a \n new line."
-# => This is a
-# => new line.
-
->>> print 'This is a \n new line.'
-# => This is a
-# => new line.
-```
+In PHP, there is minimal difference between using `" "` or `' '` for strings.
 
 ### String Interpolation
 
-Like Ruby, there are many options for string interpolation in Python. For our
-purposes, we'll be using `.format()`, as it is preferred for Python 3.5.
+`" "` in PHP allows us to evaluate expressions within strings.
 
-`.format()` is appended to a string and takes a parameters the strings to be
-concatenated. If the string contains empty `{}`s, the parameters fill the `{}`s
-in the order passed in. If they contain a number (beginning with 0), they will
-be mapped to the parameter passed to `.format()` at said index.
+```php
+$str = "test";
+echo "This is a $str"; # => "This is a test"
+echo 'This is a $str'; # => "This is a $str"
+```
 
-```python
+This allows us one option for string concatenation. Another in PHP is by using
+`.`. This operator would be used in the same fashion as `+` with JavaScript
+interpolation.
 
->>> awkward_nerd = "Lauren"
->>> awesome_nerd = "Jason"
->>> occupation = "consultant"
-
->>> "{} is a pretty cool {}.".format(awkward_nerd, occupation)
-# => "Lauren is a pretty cool consultant."
-
->>> "{0} is a {1}. {2} is a {1} as well.".format(awkward_nerd, occupation, awesome_nerd)
-# => "Lauren is a consultant. Jason is a consultant as well."
+```php
+$str = "test";
+echo "This is a " . $str; # => "This is a test"
 ```
 
 ## Flow Control
