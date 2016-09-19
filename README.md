@@ -22,6 +22,14 @@ By the end of this, developers should be able to:
     this repository.
 1.  Create a new branch, `training`, for your work.
 
+## PHP Linter
+
+Let's start off strong and get set up with a linter for PHP.
+
+```bash
+apm install linter-php
+```
+
 ## Core Syntax, Variables, and Operators
 
 ### Syntax
