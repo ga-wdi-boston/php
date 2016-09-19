@@ -184,115 +184,27 @@ To run a PHP script from the command line:
 
 > In `calculator.php` you'll notice a `<?php` tag. Feel free to read more about that here: [http://php.net/manual/en/language.basic-syntax.phptags.php](http://php.net/manual/en/language.basic-syntax.phptags.php)
 
-## Collections
+## Arrays
 
-### Lists
+Arrays in PHP are very different compared to JavaScript and Ruby arrays.
 
-Python lists are comparable to Ruby arrays. They store comma separated values
-of varying data types between square brackets `[]`.
+To quote [PHP Manual](http://php.net/manual/en/language.types.array.php):
 
-Lists are ordered, thus, indices can be leveraged to get or set their elements.
+> An array in PHP is actually an ordered map. A map is a type that associates
+> values to keys. This type is optimized for several different uses; it can be
+> treated as an array, list (vector), hash table (an implementation of a map),
+> dictionary, collection, stack, queue, and probably more. As array values can
+> be other arrays, trees and multidimensional arrays are also possible.
 
-```python
-wdi_base_langs = ["JavaScript", "Ruby", "SQL"]
-wdi_base_langs[2] # => "SQL"
-wdi_base_langs[0] = "JS" # => ["JS", "Ruby", "SQL"]
+```php
+$arr = array(
+    'key1'  => 1,
+    'key2' => 2,
+    'key3' => 3,
+);
+echo $arr['key1'];
 ```
 
-`len()` is used to get the length of a list in Python.
-
-```python
-len(wdi_base_langs) # => 3
-```
-
-We can merge lists together using the `+` operator:
-
-```python
-wdi_new_langs = ["Python"]
-all_wdi_langs = wdi_new_langs + wdi_base_langs # => ["JS", "Ruby", "SQL", "Python"]
-```
-
-#### List Methods
-
-We could have gone about adding "Python" to the end of the `wdi_base_langs`
-list by using `.append()`.
-
-```python
-wdi_base_langs.append("Python") # => ["JS", "Ruby", "SQL", "Python"]
-```
-
-Like Ruby, `.pop()` removes the last element from a Python list. `.append()`
-will add to the end of a list.
-
-We do not have built-in operators for removing or adding to the beginning of a
-list. As hackers, we've got some hacks, though.
-
-`.remove()` allows us to remove an element at any index. Thus, `list.remove(0)`
-would remove the first element from a list.
-
-We could implement our array merging to add to the beginning of a list. Look at
-the following:
-
-```python
-a = "first"
-b = ["second", "third"]
-[a] + b # => ["first", "second", "third"]
-```
-
-#### Looping Through Lists
-
-`for` loops with lists don't stray far from the loops we saw earlier.
-
-```python
-all_wdi_langs = ["JS", "Ruby", "SQL", "Python"]
-
-for lang in all_wdi_langs:
-  print lang
-```
-
-### Dictionaries
-
-Python dictionaries are very similar to other key-value objects we've seen.
-
-Dictionary keys **must** be unique. Creating a key-value pair for a key that
-already exists will simply reassign the value of the existing key.
-
-Keys can be either strings or numbers.
-
-There are two ways of instantiating a Python dictionary:
-
-```python
-new_dict = dict()   # => {}
-# or
-new_dict = {}       # => {}
-
-example_dict = {
-  "key_one": "val one",
-  "key_two": "val two",
-  "key_three": "val three"
-}
-```
-
-To add or retrieve a key-value pair, we implement square bracket notation:
-
-```python
-new_dict["fun_key"] = "fresh"
-new_dict["fun_key"]    # => "fresh"
-```
-
-`.get()` is another option for retrieving a key's value.
-
-```python
-new_dict.get("fun_key") # => "fresh"
-```
-
-Dictionary defaults are a little different from Ruby. If it is unknown that a
-key you are retrieving exists, you can call `.get()` with a default value
-should it not exist.
-
-```python
-new_dict.get("no_key", "not there") # => "not there"
-```
 
 ## Lab: Revamp FizzBuzz
 
@@ -308,7 +220,7 @@ dictionary to check that your code works properly.
 
 ## Additional Resources
 
--    [PHP Docs](http://php.net/manual/en/)
+-    [PHP Manual - Official Docs](http://php.net/manual/en/)
 
 ## [License](LICENSE)
 
