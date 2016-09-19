@@ -30,6 +30,23 @@ Let's start off strong and get set up with a linter for PHP.
 apm install linter-php
 ```
 
+## PHP REPL
+
+Another great set-up when trying out a new language is to download a decent
+console-based REPL.
+
+Let's install [`psysh`](http://psysh.org/) by running:
+
+```bash
+composer g require psy/psysh:@stable
+```
+
+We can then start the console by entering this on the command line:
+
+```bash
+psysh
+```
+
 ## Core Syntax, Variables, and Operators
 
 ### Syntax
