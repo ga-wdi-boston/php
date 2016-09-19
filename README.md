@@ -54,14 +54,19 @@ echo $str;
 
 ### True and False
 
-In Python, true and false are represented by `True` and `False` (yes, case
-matters).
+In PHP, true and false are represented by `TRUE` and `FALSE`. These are both
+case insensitive, so `true` and `false` do work, but are against convention.
 
-The falsy values of Python are:
+The falsy values of PHP are:
 
-`False` `None` `0` `0.0` `''` `[]` `{}`
+`FALSE` `NULL` `0` `0.0` `"0"` `''` `[]`
 
-`None` is equivalent to Ruby's `nil`.
+A useful builtin for getting the something's type in PHP is `gettype()`;
+
+```php
+$havingFun = TRUE;
+echo gettype($havingFun);
+```
 
 ### Operators
 
