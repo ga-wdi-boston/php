@@ -171,20 +171,18 @@ add(10,20);
 
 ## Lab: Build a Calculator
 
-In [lib/calculator.py](lib/calculator.py), create a calculator function that
+In [lib/calculator.php](lib/calculator.php), create a calculator function that
 takes two parameters. The first should be the operation to be completed
-(`addition`, `subtraction`, `multiplication`, `division`). The second should be
-a list with the appropriate number of numbers to operate on. The function
-mapped to the appropriate operation should take the expected numbers by index
-from the list passed in and return back to you the result of the operation.
+(`addition`, `subtraction`, `multiplication`, `division`). The second and third should be two values to operate on.
 
-We haven't discussed lists yet, but they are very similar to Ruby arrays. The
-syntax required for this is very similar to how you would approach this in
-Ruby. Lean on the knowledge you gained from the [Python vs Ruby study](https://github.com/ga-wdi-boston/python-vs-ruby-study/)!
+If you want to peek ahead at arrays in PHP, instead of passing in two numbers
+as arguments, pass in an array of varying length to operate on.
 
-Remember, to run a Python script from the command line:
+To run a PHP script from the command line:
 
-`python <filename.py>`
+`php <filename.php>`
+
+> In `calculator.php` you'll notice a `<?php` tag. Feel free to read more about that here: [http://php.net/manual/en/language.basic-syntax.phptags.php](http://php.net/manual/en/language.basic-syntax.phptags.php)
 
 ## Collections
 
