@@ -148,7 +148,8 @@ while ( $i < 10 )
 `for`:
 
 ```php
-for ($i = 1; $i <= 10; $i++) {
+for ($i = 1; $i <= 10; $i++)
+{
   echo $i;
 }
 ```
@@ -163,7 +164,8 @@ If `return` is not explicit, functions in PHP return `NULL`.
 Basic function structure:
 
 ```php
-function add($a,$b){
+function add($a,$b)
+{
   return $a + $b;
 }
 add(10,20);
