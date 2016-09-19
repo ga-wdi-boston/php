@@ -36,7 +36,7 @@ apm install linter-php
 
 Syntax in PHP is very similar to JavaScript.
 
-Variables use camel case, blocks are held within `{}`, and statements are
+Variables usually camel case (but you'll also see snake case), blocks are held within `{}`, and statements are
 terminated by semicolons (`;`).
 
 ### Variable Declaration
@@ -198,6 +198,9 @@ To run a PHP script from the command line:
 
 Arrays in PHP are very different compared to JavaScript and Ruby arrays.
 
+To declare a new array, `array()` and `[]` work just the same. PHP 5.4
+introduced the shorthand `[]`, which is now the preferred usage.
+
 To quote [PHP Manual](http://php.net/manual/en/language.types.array.php):
 
 > An array in PHP is actually an ordered map. A map is a type that associates
@@ -207,13 +210,44 @@ To quote [PHP Manual](http://php.net/manual/en/language.types.array.php):
 > be other arrays, trees and multidimensional arrays are also possible.
 
 ```php
-$arr = array(
+/* Indexed array (without keys): */
+$flatArr = ['firstVal', 'secondVal', 'thirdVal'];
+
+echo $flatArr[0];             # => 'firstVal'
+```
+
+```php
+/* Multi-dimensional array (with keys): */
+$multiDArr = [
     'key1'  => 1,
     'key2' => 2,
-    'key3' => 3,
-);
-echo $arr['key1'];
+    'key3' => [
+        1 => "whoa"
+      ],
+];
+
+echo $multiDArr['key3'][1];    # => "whoa"
 ```
+
+Keys in PHP arrays can either be an integer or a string. Their value can be of any type.
+
+To add a key/value pair to an array in PHP:
+
+```php
+$arr["foo"] => "bar";
+```
+
+Useful tools for PHP Arrays:
+
+| Command | Meaning | Example |
+|:--------|:--------|:--------|
+|  `var_dump()`  |  Prints out contents of array  |  var_dump($array)  |
+|  `in_array()`  |  Returns true if element exists in array  |  in_array($element, $array)  |
+|  `array_map()`  |  Returns new array with applied callback to every element of array  |  array_map($callback, $array)  |
+|  `array_filter()`  |  Returns new array with every element of array that return `TRUE` from callback  |  array_filter($array, $callback)  |
+
+There are a multitude of array methods available in PHP. Check out the list
+[here](http://php.net/manual/en/ref.array.php).
 
 ## Lab: FizzBuzz
 
