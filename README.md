@@ -163,6 +163,7 @@ Again, just like JavaScript!
 `while`:
 
 ```php
+$i = 0;
 while ( $i < 10 )
 {
   echo $i;
@@ -251,14 +252,15 @@ Keys in PHP arrays can either be an integer or a string. Their value can be of a
 To add a key/value pair to an array in PHP:
 
 ```php
-$arr["foo"] => "bar";
+$arr["foo"] = "bar";
 ```
 
 Useful tools for PHP Arrays:
 
 | Command | Meaning | Example |
 |:--------|:--------|:--------|
-|  `var_dump()`  |  Prints out contents of array  |  `var_dump($array)`  |
+|  `var_dump()`  |  Prints out contents of array (with types) |  `var_dump($array)`  |
+|  `print_r()`  |  Prints out contents of array  |  `print_r($array)`  |
 |  `in_array()`  |  Returns true if element exists in array  |  `in_array($element, $array)`  |
 |  `array_map()`  |  Returns new array with applied callback <br> to every element of array  |  `array_map($callback, $array)`  |
 |  `array_filter()`  |  Returns new array with every element of <br> array that returns `TRUE` from callback  |  `array_filter($array, $callback)`  |
